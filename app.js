@@ -1,3 +1,4 @@
+
 var bodyParser = require("body-parser"),
     methodOverride = require("method-override"),
     expressSanitizer = require("express-sanitizer"),
@@ -6,7 +7,7 @@ var bodyParser = require("body-parser"),
     app  = express();
 
 //APP CONFIG
-mongoose.connect("mongodb://localhost/restful_blog_app", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://amitesh:cTkq6plsNtQcJyTN@cluster0.xwcvmf1.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended : true}));
